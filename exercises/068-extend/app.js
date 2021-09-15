@@ -4,9 +4,30 @@ var obj1 = {
 };
 var obj2 = {
     b: 4,
-    c: 3
+    c: 3,
+    d: 6
 };
 
 function extend(obj1, obj2) {
     // your code here
+    for(let item in obj2){
+        if(item in obj1 === false){
+            obj1[item]
+        }
+    }
+    return obj1
+
+
 }
+
+extend(obj1,obj2)
+//console.log(obj1);
+//console.log(obj2);
+
+// for (const [key,value] of Object.entries(obj2)){
+//     console.log(key);
+//     if (obj1[key] == undefined){
+//         return obj1[key] = value;
+//     }
+//     //console.log(`${key}: ${value}`)
+// }
